@@ -1,0 +1,58 @@
+## Campaign Objective
+
+Simulate a real-world phishing attack on BootCon participants to raise awareness of credential phishing risks and test organizational readiness.
+
+---
+
+## Setup & Configuration
+
+- **Tool**: Gophish (installed on Kali Linux)
+- **Landing Page**: Cloned HTML of LinkedIn login portal
+- **Email Template**: "Important Network Security Notice – Immediate Action Required"
+- **Payload**: Embedded link to fake login page with tracking
+
+---
+
+## Execution
+
+- **Targets**: 30 BootCon participants (random internal distribution)
+- **Launch Method**: SMTP email delivery via internal test server
+- **Metrics Tracked**:
+  - Email Opened
+  - Link Clicked
+  - Credential Entered
+  - Time to Action
+
+---
+
+## Results
+
+| Metric                   | Value     |
+|--------------------------|-----------|
+| Links Clicked            | 16        |
+| Credentials Submitted    | 13        |
+| Fastest Submission       | 42 sec    |
+
+---
+
+## Remediation Recommendations
+
+- Mandatory phishing awareness training
+- Email filtering enhancements (SPF/DKIM/DMARC)
+- Domain monitoring and takedown support
+- Rate limiting on login attempts
+
+---
+
+## Lessons Learned
+
+- Visual clones of LinkedIn were highly convincing
+- Targeting users on mobile resulted in higher submission rate
+- Early engagement occurred within the first minute
+- Users ignored warning signs when pressure was implied in direct messages
+
+---
+
+## Ethical Disclosure
+
+All actions were performed within the scope of a sanctioned BootCon training simulation. No real user credentials were stored or misused. All participants were debriefed with results and mitigation strategies.
